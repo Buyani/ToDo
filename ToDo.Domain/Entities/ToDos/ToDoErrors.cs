@@ -4,6 +4,6 @@ namespace ToDo.Domain.Entities.ToDos
 {
     public static class ToDoErrors
     {
-        public static string SamToDoExist= "Same to do already exist";
+        public static string sameToDoExist= "Same to do description already exist";
     }
 }
