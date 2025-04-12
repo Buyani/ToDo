@@ -8,7 +8,7 @@ namespace ToDo.Domain.Entities.ToDos.Exceptions
         public HttpStatusCode StatusCode { get; } = HttpStatusCode.Conflict;
 
         public ToDoExistException()
-            : base(ToDoErrors.SamToDoExist)
+            : base(ToDoErrors.sameToDoExist)
         {
         }
 
