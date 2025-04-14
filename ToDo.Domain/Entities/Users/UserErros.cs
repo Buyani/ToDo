@@ -9,9 +9,9 @@ namespace ToDo.Domain.Entities.Users
 {
     public static class UserErros
     {
-        public static Error NotFound(Guid userId) => Error.NotFound(
+        public static Error NotFound(string email) => Error.NotFound(
     "Users.NotFound",
-    $"The user with the Id = '{userId}' was not found");
+    $"The user with the Id = '{email}' was not found");
 
         public static Error Unauthorized() => Error.Failure(
             "Users.Unauthorized",
@@ -24,5 +24,6 @@ namespace ToDo.Domain.Entities.Users
         public static readonly Error EmailNotUnique = Error.Conflict(
             "Users.EmailNotUnique",
             "The provided email is not unique");
+        public static string UserNotFound = "User not found";
     }
 }
