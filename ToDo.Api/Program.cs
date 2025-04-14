@@ -1,10 +1,15 @@
 using Scalar.AspNetCore;
+using ToDo.Application;
+using ToDo.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.RegisterDatabase(builder.Configuration);
+builder.Services.RegisterRepositories();
+builder.Services.AddToDoAppServices();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
