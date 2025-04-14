@@ -6,6 +6,7 @@ namespace ToDo.Application.Services.Todos.Interfaces
     public interface ITodoService
     {
         IEnumerable<TodoItemResponse> GetUserTodos(string email);
-        Task<TodoItemResponse> CreateTodo(CreateTodoItemRequest request);
+        Task<TodoItemResponse> CreateTodo(CreateTodoItemRequest request,string email);
+        Task<TodoItemResponse> CompleteToDo(Guid toDoId);
     }
 }

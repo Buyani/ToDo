@@ -16,7 +16,7 @@ namespace ToDo.Infrastructure
     {
         public  static IServiceCollection RegisterDatabase(this IServiceCollection services, IConfiguration configuration)
         {
-            string? connectionString = configuration.GetConnectionString("ToDoConnection");
+            string? connectionString = configuration.GetConnectionString("ToDoConnectionString");
 
             services.AddDbContext<ApplicationDbContext>(
                 options => options
